@@ -1,0 +1,147 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+main:after{
+   content: '';
+   min-height: 100vh;
+   width: 100vw;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.8) 100%);
+    z-index: -1;
+}
+
+/* Conteudo Pai*/
+
+.conteudo{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Conteudo Filho*/
+
+
+.conteudo .informacao .logo{
+    filter: invert(1);
+    max-width: 400px;
+    margin-bottom: 110px;
+}
+
+.conteudo .informacao .texto{
+    color: aliceblue;
+    font-size: 24px;
+    width: 49%;
+    line-height: 30px;
+}
+
+/* Conteudo Filho */
+
+/* Botão */
+
+.conteudo .botoes-carrosel{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    height:100px;
+    margin-bottom: -200px;
+}
+
+.botoes-carrosel .botao{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid transparent ;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border-color: #fff;
+}
+
+.botoes-carrosel .botao:hover{
+    background-color: rgb(28, 29, 29);
+}
+
+.botoes-carrosel .botao.selecionado{
+    background-color: green;
+}
+
+/* Botão */
+
+/* Menu Lateral */
+.menu-lateral{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    right: 20px;
+    top: 0;
+    width: 80px;  
+}
+
+.menu-lateral ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-lateral .icone{
+    width: 40px;
+    filter: invert(1);
+    list-style: none;
+}
+
+/* Menu Lateral */
+
+.menu-lateral .icone .item{
+    transition: 0.3s ease-in-out;
+}
+
+
+.menu-lateral .icone .item:hover{
+    transform: scale(1.2);
+}
+
+/* Menu Lateral */
+
+/* Carrosel/Fundo */
+.carrosel{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.carrosel .imagem{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: none;
+}
+
+.carrosel .imagem.ativa{
+   display: block;
+}
+
+/* Carrosel/Fundo */
+
+/*Mudar Imagem com Glow*/
+
+@keyframes mudarImagem {
+    from{
+        opacity: 0.85;
+    } 
+    to{
+        opacity: 1;
+    }
+}
+
+/*Mudar Imagem com Glow*/
